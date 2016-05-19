@@ -21,3 +21,6 @@ wp-content/plugins/hello.php
 
 # Uncompressed .sql file
 _db/*.sql
+
+# BFG Report folder
+.git.bfg-report/
