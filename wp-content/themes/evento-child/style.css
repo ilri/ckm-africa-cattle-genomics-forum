@@ -1,0 +1,17 @@
+/*
+ Theme Name:   Evento Child
+ Theme URI:    http://discussion.benale.net/evento-child/
+ Description:  A child theme for Event conference theme
+ Author:       benhack
+ Author URI:   http://benhack.at
+ Template:     evento
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, three-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  evento-child
+*/
+
+@import url("../evento/style.css");
+/* Place your custom styles below this line
+-------------------------------------------------------------- */
