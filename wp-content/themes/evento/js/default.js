@@ -39,7 +39,7 @@ jQuery(function ($) {
 					s.lostpw.show(); s.login.hide(); s.register.hide();
 				}
 
-                
+
 
 				s.url = this.href;
 
@@ -50,7 +50,7 @@ jQuery(function ($) {
 						opacity:85,
 						onShow: SimpleModalLogin.show,
 						position: ['15%', null],
-						overlayClose:true  
+						overlayClose:true
 					});
 				}
 				else {
@@ -63,7 +63,7 @@ jQuery(function ($) {
 				$(document).bind('keydown.simplemodal-login', SimpleModalLogin.keydown);
 			}
 		},
-		show: function (obj) { 
+		show: function (obj) {
 			var s = SimpleModalLogin;
 			s.dialog = obj || s.dialog;
 			s.modal = s.modal || this;
@@ -77,13 +77,13 @@ jQuery(function ($) {
 			// remove any existing errors or messages
 			s.clear(s.dialog.container[0]);
 
-			form.unbind('submit.simplemodal-login').bind('submit.simplemodal-login', function (e) { 
+			form.unbind('submit.simplemodal-login').bind('submit.simplemodal-login', function (e) {
 				e.preventDefault();
 
 				// remove any existing errors or messages
 				s.clear(s.dialog.container[0]);
 
-				if (s.isValid(form)) { 
+				if (s.isValid(form)) {
 					fields.hide(); activity.show();
 
 					if (s.url && s.url.indexOf('redirect_to') !== -1) {
@@ -142,7 +142,7 @@ jQuery(function ($) {
 						}
 					});
 				}
-				else { 
+				else {
 					s.showError(form, s.error);
 				}
 			});
@@ -208,4 +208,9 @@ jQuery(function ($) {
 	};
 
 	SimpleModalLogin.init();
+
+  // Hack to auto select the comments filter
+	$(document).ready(function(){
+		jQuery("#activity-filter-by").val("new_blog_comment").trigger("change");
+	});
 });
