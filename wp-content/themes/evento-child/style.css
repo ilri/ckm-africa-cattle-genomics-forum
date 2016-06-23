@@ -41,6 +41,12 @@ body.registration p:first-child{
 body.registration form p.field-visibility-settings-notoggle{
   font-size: .8em;
 }
+body.registration form#signup_form > p{
+  font-size: 12px;
+}
+body.registration form#signup_form label[for=captcha_code]{
+  clear: both;
+}
 body.registration #buddypress .standard-form div.submit {
   margin: 0 20px 0 0;
   padding: 0;
