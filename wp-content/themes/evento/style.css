@@ -862,12 +862,3 @@ input.ticket_qty{width: 30px;}
 .b.w_620 .b_text ul.program span.event{max-width: 415px;}
 
 #primary .speakers a img { width: auto;}
-
-/********* Custom CSS *********/
-ul.program li span.time{
-  display: none;
-}
-
-.b_text ul.program li span.event-desc{
-  margin-left: 20px;
-}

@@ -12,6 +12,11 @@
  Text Domain:  evento-child
 */
 
-@import url("../evento/style.css");
-/* Place your custom styles below this line
--------------------------------------------------------------- */
+/********* Remove Time Indicators *********/
+ul.program li span.time{
+  display: none;
+}
+
+.b_text ul.program li span.event-desc{
+  margin-left: 20px;
+}
