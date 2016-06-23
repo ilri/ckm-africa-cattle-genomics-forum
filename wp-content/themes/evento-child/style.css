@@ -1,22 +1,79 @@
 /*
- Theme Name:   Evento Child
- Theme URI:    http://discussion.benale.net/evento-child/
- Description:  A child theme for Event conference theme
- Author:       benhack
- Author URI:   http://benhack.at
- Template:     evento
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         light, dark, three-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  evento-child
+Theme Name:   Evento Child
+Theme URI:    http://discussion.benale.net/evento-child/
+Description:  A child theme for Event conference theme
+Author:       benhack
+Author URI:   http://benhack.at
+Template:     evento
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, three-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  evento-child
 */
 
 /********* Remove Time Indicators *********/
+body.registration{
+  background-color: #ffffff;
+  background: none;
+  width: 100%;
+  padding: 0 0 0 0;
+  float: none;
+  position: initial;
+  text-align: initial;
+  text-shadow: none;
+  color: initial;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body.registration #buddypress .standard-form input[type=text],
+body.registration #buddypress .standard-form input[type=email],
+body.registration #buddypress .standard-form input[type=password]{
+  width: 90% !important;
+  font-size: 100%;
+  height: 30px;
+}
+body.registration #buddypress .standard-form input#captcha_code{
+  width: 270px !important;
+}
+body.registration p:first-child{
+  margin-bottom: 15px !important;
+}
+body.registration form p.field-visibility-settings-notoggle{
+  font-size: .8em;
+}
+body.registration #buddypress .standard-form div.submit {
+  margin: 0 20px 0 0;
+  padding: 0;
+  display: inline-block;
+  height: 32px;
+  width: auto;
+  position: relative;
+  cursor: pointer;
+  background: url(../evento/images/button.bg.png) no-repeat left 0;
+  background-position: left -64px;
+  float: right;
+}
+body.registration #buddypress .standard-form div.submit input[type=submit]{
+  float: left;
+  line-height: 32px;
+  margin: 0 -20px 0 0!important;
+  padding: 0 20px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: url(../evento/images/button.bg.png) no-repeat right -32px;
+  background-position: right -96px;
+  width: auto!important;
+  font-size: 12px;
+  font-family: "Oswald";
+  text-shadow: 0 -1px 0 #1a5e6f;
+}
+
+/***** Hide & align time indicator ***/
 ul.program li span.time{
   display: none;
 }
-
 .b_text ul.program li span.event-desc{
   margin-left: 20px;
 }
