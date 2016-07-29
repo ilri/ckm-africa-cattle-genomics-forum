@@ -10,4 +10,5 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 // Add the child theme's javascript
 wp_enqueue_script('set_default_filter', get_stylesheet_directory_uri() . '/set_default_filter.js', array("jquery"));
+
 ?>
