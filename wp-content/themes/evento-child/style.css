@@ -83,3 +83,23 @@ ul.program li span.time{
 .b_text ul.program li span.event-desc{
   margin-left: 20px;
 }
+
+/***** Show circular share buttons *****/
+div#share_buttons_single_page a.tooltip{
+  opacity: 1 !important;
+}
+
+table.summary-table{
+    border-collapse: collapse;
+    border: 1px solid #999;
+}
+
+table.summary-table th,
+table.summary-table td {
+    border: 1px solid #999;
+    padding-left: 3px;
+}
+
+div.cosmo-comment-quote span.second-part{
+  display: none;
+}

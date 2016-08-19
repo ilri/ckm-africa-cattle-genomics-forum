@@ -35,6 +35,7 @@
                             </p>
                         </div>
                     </div>
+                    <?php if(function_exists('wp_ulike')) wp_ulike_comments('get'); ?>
                 </li>
         <?php
                 break;
@@ -58,7 +59,7 @@
 ?>
 <p class="delimiter">&nbsp;</p>
 <div id="comments">
-<?php 
+<?php
     if ( post_password_required() ) {
 ?>
             <p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'cosmotheme' ); ?></p>
@@ -76,21 +77,21 @@
 	// You can start editing here -- including this comment!
 ?>
 
-<?php 
-    if ( have_comments() && comments_open()) { 
+<?php
+    if ( have_comments() && comments_open()) {
         $pgn = paginate_comments_links( array('prev_text' => '&laquo; Prev', 'next_text' => 'Next &raquo;' , 'format' => 'array' , 'echo' => false) );
 ?>
         <h3 class="comments-title" id="comments-title"><?php echo get_comments_number().' '; if(get_comments_number() == 1) {_e('Comment','cosmotheme');} else {_e('Comments','cosmotheme');} ?></h3>
         <p class="delimiter">&nbsp;</p>
-<?php 
-	 
+<?php
+
         if( strlen( $pgn ) > 0 ) {
             echo '<ul class="b_pag center p_b">';
             echo str_replace( 'next' , 'no_link' , str_replace('prev' , 'no_link' , str_replace('<a' , '<li><a' , str_replace('</a>' , '</a></li>' , str_replace( '<span' , '<li class="active"><span' , str_replace('</span>', '</span></li>' , $pgn ) ) ) ) ) );
             echo '</ul>';
         }
 ?>
-		
+
 
 		<ol class="cosmo-comment-list cosmo-comment-plain">
 			<?php
@@ -103,10 +104,10 @@
 				wp_list_comments( array( 'callback' => 'de_comment' ) );
 			?>
 		</ol>
-			
 
-<?php 
-	 
+
+<?php
+
         if( strlen( $pgn ) > 0 ) {
             echo '<ul class="b_pag center p_b">';
             echo str_replace( 'next' , 'no_link' , str_replace('prev' , 'no_link' , str_replace('<a' , '<li><a' , str_replace('</a>' , '</a></li>' , str_replace( '<span' , '<li class="active"><span' , str_replace('</span>', '</span></li>' , $pgn ) ) ) ) ) );
@@ -133,8 +134,8 @@
         'url'    => '<label for="url">' . __( 'Website','cosmotheme' ) . '</label><p class="comment-form-url input square"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />' .
                     '</p>',
 	);
-				
-	$args = array(	
+
+	$args = array(
 		'title_reply' => '<a id="toggle_link" href="#">'.__("Leave a Reply",'cosmotheme').'</a>',
         'comment_notes_after' =>'',
         'comment_notes_before' =>'<p class="delimiter">&nbsp;</p><p class="comment-notes">' . __( 'Your email address will not be published. Required fields are marked' , 'cosmotheme' ) . ' *</p>',
